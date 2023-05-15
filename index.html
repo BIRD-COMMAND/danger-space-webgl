@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | danger-space</title>
+    <style>body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }</style>
   </head>
-  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
+  <body style="border: 0;">
     <canvas id="unity-canvas" width=1280 height=720 tabindex="-1" style="width: 1280px; height: 720px; background: #231F20"></canvas>
     <script src="Build/danger-space-webgl.loader.js"></script>
     <script>
@@ -19,9 +20,8 @@
         var canvas = document.querySelector("#unity-canvas");
         canvas.style.width = "100%";
         canvas.style.height = "100%";
-        canvas.style.position = "fixed";
-
-        document.body.style.textAlign = "left";
+        //canvas.style.position = "fixed";
+        //document.body.style.textAlign = "left";
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
