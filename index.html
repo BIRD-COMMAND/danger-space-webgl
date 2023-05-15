@@ -35,6 +35,17 @@
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
+
+      window.onload = function() {
+        function resizeCanvas() {
+            var canvas = document.getElementById('unity-canvas');
+            canvas.style.width = window.innerWidth + 'px';
+            canvas.style.height = window.innerHeight + 'px';
+        }
+        window.onresize = resizeCanvas;
+        resizeCanvas();
+      }
+
     </script>
   </body>
 </html>
